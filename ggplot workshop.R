@@ -1,4 +1,4 @@
-install.packages("tidyverse")
+#install.packages("tidyverse")
 library(tidyverse)
 
 mpg
@@ -13,5 +13,5 @@ install.packages(c("pkg1", "pkg2"))
 install.packages("Rcmdr", dependencies = TRUE)
 
 ggplot() 
-install.packages('ggplot')
-library(ggplot)
+install.packages('ggplot2')
+library(ggplot2)
