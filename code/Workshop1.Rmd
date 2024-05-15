@@ -52,6 +52,7 @@ ggplot(data = mpg)
 We need to map some aesthetics!!
 
 # When you’re creating a plot, you essentially need two attributes of a plot: a geom and aesthetics.
+# add color by class
 ```{r}
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, colour = class))
@@ -73,9 +74,12 @@ Note the warning!!!
 
 
 # Change transparency (alpha) by class
+# 'alpha' is the code to made the data change reansparemcy
+# consider trying a simple number, like 0.3 to this aesthetic, which globally applies a transparency to all points
 ```{r}
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+
 ```
 Another warning!!
 Question: When would using alpha (or size be appropriate??)
