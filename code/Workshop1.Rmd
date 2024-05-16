@@ -12,11 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Install and load tidyverse packages
 ```{r}
-install.packages("tidyverse") # Delete this line once installed
+#install.packages("tidyverse") # Delete this line once installed
 library("tidyverse")
 ```
 
-
+  
 # Load the data (mpg is built into ggplot2)
 ```{r}
 data(mpg)
