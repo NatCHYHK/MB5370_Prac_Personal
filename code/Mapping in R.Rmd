@@ -34,7 +34,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r}
 # install and load your packages
 #install.packages("tidyverse")
-#install.packages("sf") 
+#install.packages("sf")            #work as shapefile or feature collection in R
 #install.packages("terra")
 #install.packages("tmap")
 
@@ -52,5 +52,45 @@ library(tmap) # Thematic maps are geographical maps in which spatial data distri
 library(readr)
 dat <- read_csv("../data/data-for-course/copepods_raw.csv")
 dat
+```
+```{r}
+# A tibble: 5,313 × 11
+   silk_id segment_no latitude longitude sample_time_utc  project route vessel  
+     <dbl>      <dbl>    <dbl>     <dbl> <chr>            <chr>   <chr> <chr>   
+ 1       1          1    -28.3      154. 26/06/2009 22:08 AusCPR  BRSY  ANL Win...
+ 2       1          5    -28.7      154. 26/06/2009 23:12 AusCPR  BRSY  ANL Win...
+ 3       1          9    -29.0      154. 27/06/2009 0:17  AusCPR  BRSY  ANL Win...
+ 4       1         13    -29.3      154. 27/06/2009 1:22  AusCPR  BRSY  ANL Win...
+ 5       1         17    -29.7      154. 27/06/2009 2:26  AusCPR  BRSY  ANL Win...
+ 6       1         18    -29.8      154. 27/06/2009 2:43  AusCPR  BRSY  ANL Win...
+ 7       1         26    -30.4      153. 27/06/2009 4:52  AusCPR  BRSY  ANL Win...
+ 8       1         30    -30.7      153. 27/06/2009 5:57  AusCPR  BRSY  ANL Win...
+ 9       1         33    -31.0      153. 27/06/2009 6:45  AusCPR  BRSY  ANL Win...
+10       1         37    -31.3      153. 27/06/2009 7:50  AusCPR  BRSY  ANL Win...
+# ... with 5,303 more rows, and 3 more variables: meanlong <dbl>, region <chr>,
+#   richness_raw <dbl>
+
+
+```
+
+#plotting data
+```{r}
+library(ggplot2)
+ggplot(dat) + 
+  aes(x = longitude, y = latitude, color = richness_raw) +
+  geom_point()
+```
+
+#Richness
+```{r}
+ggplot(dat, aes(x = latitude, y = richness_raw)) + 
+  stat_smooth() + 
+  geom_point()
+```
+
+#Adding map into data in R
+```{r}
+sdat <- st_as_sf(dat, coords = c("longitude", "latitude"), 
+                 crs = 4326)
 ```
 
