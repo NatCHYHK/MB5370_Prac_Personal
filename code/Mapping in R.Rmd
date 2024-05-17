@@ -51,7 +51,9 @@ library(tmap) # Thematic maps are geographical maps in which spatial data distri
 #load the copepod data into R studio
 library(readr)
 dat <- read_csv("../data/data-for-course/copepods_raw.csv")
-dat
+#when have error in extracting data, sometimes the location is wrong
+#'..' goes upward of file path, '/' go into a folder
+View(dat)
 ```
 ```{r}
 # A tibble: 5,313 × 11
@@ -88,9 +90,27 @@ ggplot(dat, aes(x = latitude, y = richness_raw)) +
   geom_point()
 ```
 
+#----------------------------------------------------------------------------------------
+
 #Adding map into data in R
+
+#st_as_sf converts different data types to simple features
+#which means it turns the data line of latitude & longitude into a location data point
+#coords gives the names of the columns that relate to the spatial coordinates (in order of X coordinate followed by Y coordinate)
 ```{r}
 sdat <- st_as_sf(dat, coords = c("longitude", "latitude"), 
                  crs = 4326)
 ```
+
+
+#In R, best practice is to either use an EPSG code or Well-known text (WKT) to define a CRS
+#we chose a common ‘one-size-fits-all’ GCS called WGS84 to define the crs using the EPSG code 4326
+```{r}
+crs4326 <- st_crs(4326)
+crs4326 # look at the whole CRS
+crs4326$Name # pull out just the name of the crs
+
+crs4326$wkt # crs in well-known text format
+```
+
 

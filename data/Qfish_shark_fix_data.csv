@@ -1,0 +1,330 @@
+Area,CalendarYear,SpeciesGroup,NumberCaught Total
+Bribie Island,2017,Shark,1
+Bribie Island,2018,Shark,2
+Bribie Island,2019,Shark,1
+Bribie Island,2020,Shark,1
+Bribie Island,2021,Shark,1
+Bribie Island,2021,Turtle,1
+Bribie Island,2021 Total,,2
+Bribie Island,2022,Shark,3
+Bribie Island,2023,Shark,2
+Bribie Island,2023,Turtle,1
+Bribie Island,2023 Total,,3
+Bribie Island Total,,,13
+Bundaberg,2012,Shark,56
+Bundaberg,2012,Turtle,3
+Bundaberg,2012 Total,,59
+Bundaberg,2013,Shark,76
+Bundaberg,2013,Turtle,1
+Bundaberg,2013 Total,,77
+Bundaberg,2014,Shark,57
+Bundaberg,2014,Turtle,5
+Bundaberg,2014 Total,,62
+Bundaberg,2015,Shark,45
+Bundaberg,2015,Turtle,7
+Bundaberg,2015 Total,,52
+Bundaberg,2016,Shark,52
+Bundaberg,2016,Turtle,1
+Bundaberg,2016 Total,,53
+Bundaberg,2017,Shark,54
+Bundaberg,2018,Shark,53
+Bundaberg,2019,Shark,58
+Bundaberg,2020,Shark,55
+Bundaberg,2021,Shark,73
+Bundaberg,2022,Shark,64
+Bundaberg,2023,Shark,54
+Bundaberg,2023,Turtle,1
+Bundaberg,2023 Total,,55
+Bundaberg,2024,Shark,25
+Bundaberg Total,,,740
+Cairns,2012,Shark,91
+Cairns,2012,Turtle,2
+Cairns,2012 Total,,93
+Cairns,2013,Shark,74
+Cairns,2014,Shark,71
+Cairns,2015,Shark,116
+Cairns,2016,Shark,51
+Cairns,2017,Shark,47
+Cairns,2018,Shark,43
+Cairns,2019,Shark,43
+Cairns,2020,Shark,62
+Cairns,2021,Shark,58
+Cairns,2022,Shark,60
+Cairns,2023,Shark,66
+Cairns,2024,Shark,66
+Cairns Total,,,850
+Capricorn Coast,2012,Shark,105
+Capricorn Coast,2012,Turtle,2
+Capricorn Coast,2012 Total,,107
+Capricorn Coast,2013,Shark,116
+Capricorn Coast,2013,Turtle,4
+Capricorn Coast,2013 Total,,120
+Capricorn Coast,2014,Shark,66
+Capricorn Coast,2015,Shark,71
+Capricorn Coast,2015,Turtle,1
+Capricorn Coast,2015 Total,,72
+Capricorn Coast,2016,Shark,54
+Capricorn Coast,2017,Shark,41
+Capricorn Coast,2018,Shark,43
+Capricorn Coast,2018,Turtle,1
+Capricorn Coast,2018 Total,,44
+Capricorn Coast,2019,Shark,38
+Capricorn Coast,2020,Shark,50
+Capricorn Coast,2021,Shark,144
+Capricorn Coast,2021,Turtle,3
+Capricorn Coast,2021 Total,,147
+Capricorn Coast,2022,Shark,178
+Capricorn Coast,2022,Turtle,10
+Capricorn Coast,2022 Total,,188
+Capricorn Coast,2023,Shark,244
+Capricorn Coast,2023,Turtle,3
+Capricorn Coast,2023 Total,,247
+Capricorn Coast,2024,Shark,129
+Capricorn Coast Total,,,1303
+Gladstone,2012,Shark,67
+Gladstone,2013,Shark,59
+Gladstone,2014,Shark,50
+Gladstone,2015,Shark,46
+Gladstone,2016,Shark,52
+Gladstone,2017,Shark,45
+Gladstone,2018,Shark,36
+Gladstone,2019,Shark,42
+Gladstone,2019,Turtle,1
+Gladstone,2019 Total,,43
+Gladstone,2020,Shark,29
+Gladstone,2020,Turtle,1
+Gladstone,2020 Total,,30
+Gladstone,2021,Shark,34
+Gladstone,2021,Turtle,3
+Gladstone,2021 Total,,37
+Gladstone,2022,Shark,47
+Gladstone,2022,Turtle,2
+Gladstone,2022 Total,,49
+Gladstone,2023,Shark,87
+Gladstone,2023,Turtle,5
+Gladstone,2023 Total,,92
+Gladstone,2024,Shark,61
+Gladstone Total,,,667
+Gold Coast,2012,Shark,49
+Gold Coast,2012,Turtle,8
+Gold Coast,2012 Total,,57
+Gold Coast,2013,Shark,34
+Gold Coast,2013,Turtle,9
+Gold Coast,2013 Total,,43
+Gold Coast,2014,Shark,36
+Gold Coast,2014,Turtle,9
+Gold Coast,2014 Total,,45
+Gold Coast,2015,Shark,47
+Gold Coast,2015,Turtle,5
+Gold Coast,2015 Total,,52
+Gold Coast,2016,Shark,46
+Gold Coast,2016,Turtle,10
+Gold Coast,2016 Total,,56
+Gold Coast,2017,Shark,59
+Gold Coast,2017,Turtle,10
+Gold Coast,2017 Total,,69
+Gold Coast,2018,Shark,50
+Gold Coast,2018,Turtle,13
+Gold Coast,2018 Total,,63
+Gold Coast,2019,Shark,60
+Gold Coast,2019,Turtle,6
+Gold Coast,2019 Total,,66
+Gold Coast,2020,Shark,84
+Gold Coast,2020,Turtle,10
+Gold Coast,2020 Total,,94
+Gold Coast,2021,Shark,84
+Gold Coast,2021,Turtle,4
+Gold Coast,2021 Total,,88
+Gold Coast,2022,Shark,69
+Gold Coast,2022,Turtle,18
+Gold Coast,2022 Total,,87
+Gold Coast,2023,Shark,85
+Gold Coast,2023,Turtle,5
+Gold Coast,2023 Total,,90
+Gold Coast,2024,Shark,19
+Gold Coast,2024,Turtle,2
+Gold Coast,2024 Total,,21
+Gold Coast Total,,,831
+Mackay,2012,Shark,100
+Mackay,2012,Turtle,1
+Mackay,2012 Total,,101
+Mackay,2013,Shark,84
+Mackay,2013,Turtle,1
+Mackay,2013 Total,,85
+Mackay,2014,Shark,110
+Mackay,2015,Shark,82
+Mackay,2016,Shark,66
+Mackay,2017,Shark,55
+Mackay,2018,Shark,40
+Mackay,2019,Shark,44
+Mackay,2020,Shark,68
+Mackay,2021,Shark,93
+Mackay,2022,Shark,61
+Mackay,2023,Shark,72
+Mackay,2024,Shark,19
+Mackay Total,,,896
+Nth Stradbroke Is.,2012,Shark,17
+Nth Stradbroke Is.,2012,Turtle,1
+Nth Stradbroke Is.,2012 Total,,18
+Nth Stradbroke Is.,2013,Shark,16
+Nth Stradbroke Is.,2013,Turtle,1
+Nth Stradbroke Is.,2013 Total,,17
+Nth Stradbroke Is.,2014,Shark,8
+Nth Stradbroke Is.,2015,Shark,22
+Nth Stradbroke Is.,2015,Turtle,2
+Nth Stradbroke Is.,2015 Total,,24
+Nth Stradbroke Is.,2016,Shark,10
+Nth Stradbroke Is.,2016,Turtle,2
+Nth Stradbroke Is.,2016 Total,,12
+Nth Stradbroke Is.,2017,Shark,13
+Nth Stradbroke Is.,2017,Turtle,3
+Nth Stradbroke Is.,2017 Total,,16
+Nth Stradbroke Is.,2018,Shark,21
+Nth Stradbroke Is.,2019,Shark,15
+Nth Stradbroke Is.,2020,Shark,14
+Nth Stradbroke Is.,2020,Turtle,3
+Nth Stradbroke Is.,2020 Total,,17
+Nth Stradbroke Is.,2021,Shark,24
+Nth Stradbroke Is.,2021,Turtle,12
+Nth Stradbroke Is.,2021 Total,,36
+Nth Stradbroke Is.,2022,Shark,16
+Nth Stradbroke Is.,2022,Turtle,8
+Nth Stradbroke Is.,2022 Total,,24
+Nth Stradbroke Is.,2023,Shark,13
+Nth Stradbroke Is.,2023,Turtle,3
+Nth Stradbroke Is.,2023 Total,,16
+Nth Stradbroke Is.,2024,Shark,6
+Nth Stradbroke Is. Total,,,230
+Rainbow Beach,2012,Shark,60
+Rainbow Beach,2012,Turtle,7
+Rainbow Beach,2012 Total,,67
+Rainbow Beach,2013,Shark,76
+Rainbow Beach,2013,Turtle,4
+Rainbow Beach,2013 Total,,80
+Rainbow Beach,2014,Shark,44
+Rainbow Beach,2014,Turtle,3
+Rainbow Beach,2014 Total,,47
+Rainbow Beach,2015,Shark,57
+Rainbow Beach,2016,Shark,36
+Rainbow Beach,2016,Turtle,6
+Rainbow Beach,2016 Total,,42
+Rainbow Beach,2017,Shark,34
+Rainbow Beach,2017,Turtle,6
+Rainbow Beach,2017 Total,,40
+Rainbow Beach,2018,Shark,31
+Rainbow Beach,2018,Turtle,19
+Rainbow Beach,2018 Total,,50
+Rainbow Beach,2019,Shark,34
+Rainbow Beach,2019,Turtle,18
+Rainbow Beach,2019 Total,,52
+Rainbow Beach,2020,Shark,34
+Rainbow Beach,2020,Turtle,19
+Rainbow Beach,2020 Total,,53
+Rainbow Beach,2021,Shark,49
+Rainbow Beach,2021,Turtle,27
+Rainbow Beach,2021 Total,,76
+Rainbow Beach,2022,Shark,43
+Rainbow Beach,2022,Turtle,29
+Rainbow Beach,2022 Total,,72
+Rainbow Beach,2023,Shark,33
+Rainbow Beach,2023,Turtle,15
+Rainbow Beach,2023 Total,,48
+Rainbow Beach,2024,Shark,19
+Rainbow Beach,2024,Turtle,2
+Rainbow Beach,2024 Total,,21
+Rainbow Beach Total,,,705
+Sunshine Coast North,2012,Shark,29
+Sunshine Coast North,2012,Turtle,3
+Sunshine Coast North,2012 Total,,32
+Sunshine Coast North,2013,Shark,28
+Sunshine Coast North,2014,Shark,33
+Sunshine Coast North,2014,Turtle,1
+Sunshine Coast North,2014 Total,,34
+Sunshine Coast North,2015,Shark,48
+Sunshine Coast North,2015,Turtle,3
+Sunshine Coast North,2015 Total,,51
+Sunshine Coast North,2016,Shark,39
+Sunshine Coast North,2017,Shark,39
+Sunshine Coast North,2017,Turtle,4
+Sunshine Coast North,2017 Total,,43
+Sunshine Coast North,2018,Shark,73
+Sunshine Coast North,2019,Shark,56
+Sunshine Coast North,2019,Turtle,5
+Sunshine Coast North,2019 Total,,61
+Sunshine Coast North,2020,Shark,58
+Sunshine Coast North,2020,Turtle,3
+Sunshine Coast North,2020 Total,,61
+Sunshine Coast North,2021,Shark,63
+Sunshine Coast North,2021,Turtle,4
+Sunshine Coast North,2021 Total,,67
+Sunshine Coast North,2022,Shark,60
+Sunshine Coast North,2022,Turtle,5
+Sunshine Coast North,2022 Total,,65
+Sunshine Coast North,2023,Shark,89
+Sunshine Coast North,2023,Turtle,5
+Sunshine Coast North,2023 Total,,94
+Sunshine Coast North,2024,Shark,49
+Sunshine Coast North,2024,Turtle,2
+Sunshine Coast North,2024 Total,,51
+Sunshine Coast North Total,,,699
+Sunshine Coast South,2017,Shark,7
+Sunshine Coast South,2018,Shark,18
+Sunshine Coast South,2019,Shark,13
+Sunshine Coast South,2019,Turtle,1
+Sunshine Coast South,2019 Total,,14
+Sunshine Coast South,2020,Shark,9
+Sunshine Coast South,2020,Turtle,1
+Sunshine Coast South,2020 Total,,10
+Sunshine Coast South,2021,Shark,25
+Sunshine Coast South,2022,Shark,25
+Sunshine Coast South,2022,Turtle,4
+Sunshine Coast South,2022 Total,,29
+Sunshine Coast South,2023,Shark,34
+Sunshine Coast South,2024,Shark,12
+Sunshine Coast South Total,,,149
+Sunshine Coast South & Bribie Island,2012,Shark,21
+Sunshine Coast South & Bribie Island,2012,Turtle,2
+Sunshine Coast South & Bribie Island,2012 Total,,23
+Sunshine Coast South & Bribie Island,2013,Shark,15
+Sunshine Coast South & Bribie Island,2013,Turtle,2
+Sunshine Coast South & Bribie Island,2013 Total,,17
+Sunshine Coast South & Bribie Island,2014,Shark,10
+Sunshine Coast South & Bribie Island,2014,Turtle,1
+Sunshine Coast South & Bribie Island,2014 Total,,11
+Sunshine Coast South & Bribie Island,2015,Shark,22
+Sunshine Coast South & Bribie Island,2015,Turtle,2
+Sunshine Coast South & Bribie Island,2015 Total,,24
+Sunshine Coast South & Bribie Island,2016,Shark,12
+Sunshine Coast South & Bribie Island,2016,Turtle,6
+Sunshine Coast South & Bribie Island,2016 Total,,18
+Sunshine Coast South & Bribie Island,2017,Shark,8
+Sunshine Coast South & Bribie Island,2017,Turtle,2
+Sunshine Coast South & Bribie Island,2017 Total,,10
+Sunshine Coast South & Bribie Island Total,,,103
+Townsville,2012,Shark,158
+Townsville,2013,Shark,107
+Townsville,2014,Shark,101
+Townsville,2014,Turtle,1
+Townsville,2014 Total,,102
+Townsville,2015,Shark,139
+Townsville,2015,Turtle,2
+Townsville,2015 Total,,141
+Townsville,2016,Shark,112
+Townsville,2016,Turtle,1
+Townsville,2016 Total,,113
+Townsville,2017,Shark,107
+Townsville,2017,Turtle,1
+Townsville,2017 Total,,108
+Townsville,2018,Shark,113
+Townsville,2019,Shark,82
+Townsville,2019,Turtle,2
+Townsville,2019 Total,,84
+Townsville,2020,Shark,130
+Townsville,2021,Shark,150
+Townsville,2021,Turtle,3
+Townsville,2021 Total,,153
+Townsville,2022,Shark,127
+Townsville,2023,Shark,179
+Townsville,2024,Shark,63
+Townsville Total,,,1578
+Grand Total,,,8764

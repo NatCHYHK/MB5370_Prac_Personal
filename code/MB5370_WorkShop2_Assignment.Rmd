@@ -33,7 +33,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r}
 #load the copepod data into R studio
 library(readr)
-dat <- read_csv("../data/Qfish_shark_data.csv")
+dat <- read_csv("../data/Qfish_shark_fix_data.csv")
 dat
 ```
 
