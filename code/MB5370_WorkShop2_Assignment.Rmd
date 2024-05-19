@@ -30,10 +30,30 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 #----------------------------------------------------------------------------------
 
+#Import data set
 ```{r}
 #load the copepod data into R studio
+#install.packages(readr)
 library(readr)
 dat <- read_csv("../data/Qfish_shark_fix_data.csv")
 dat
+View("dat")
+```
+
+#ggplot
+```{r}
+#install.packages("tidyverse") # Delete this line once installed
+library("tidyverse")
+```
+
+
+#figure
+```{r}
+ggplot(data = dat) + 
+  geom_smooth(mapping = aes(x = "NumberCaught Total", y = "CalendarYear"))
+```
+
+```{r}
+ggplot(data = dat)
 ```
 
