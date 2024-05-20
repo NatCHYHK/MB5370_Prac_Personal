@@ -32,20 +32,18 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 #Import data set
 ```{r}
-#load the copepod data into R studio
-#install.packages(readr)
-library(readr)
-Qfish_data <- read_csv("../data/Qfish_shark_fix_data.csv")
-Qfish_data
-```
-
-#tidy data
-```{r}
 library(readr)
 dat <- read_csv("../data/Qfish_shark_data.csv")
 dat
 ```
 
+#download colour package
+```{r}
+#install.packages("viridis")
+library(viridis)
+```
+
+#tidy data
 ```{r}
 str(dat)   #show structure of data frame
 dat$CalendarYear = as.numeric(dat$CalendarYear)
@@ -53,17 +51,21 @@ filtered_dat <- dat %>%
   filter(!grepl("Total", CalendarYear)) %>%
   filter(!grepl("Total", Area))
 ```
+#obmit NA in dataset
+```{r}
+filtered_dat <- filtered_dat %>% filter(if_any(everything(), ~ !is.na(.)))
+print(filtered_dat)
 
+```
 
 #ggplot
 ```{r}
 #install.packages("tidyverse") # Delete this line once installed
 library("tidyverse")
 ```
-#tidy data
-#rename?
 
-#figure
+
+#plot figure
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_smooth(mapping = aes(x = `NumberCaught Total`, y = `CalendarYear`, colour = Area))
@@ -88,5 +90,24 @@ ggplot(data = filtered_dat) +
 
 ```
 
-ggplot(data = diamonds) + 
-  geom_bar(mapping = aes(x = cut, fill = clarity), position = "fill")
+```{r}
+ggplot(data = filtered_dat) + 
+  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), position = "stack", stat = "identity") +
+  scale_colour_viridis()
+```
+
+```{r}
+ggplot(data = filtered_dat) + 
+  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
+           position = "stack", stat = "identity") +
+  scale_fill_viridis_d()
+```
+
+```{r}
+ggplot(data = filtered_dat) + 
+  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
+           position = "stack", stat = "identity") +
+  scale_fill_viridis_d() + 
+  facet_wrap(~ SpeciesGroup)
+```
+
