@@ -109,5 +109,6 @@ ggplot(data = filtered_dat) +
            position = "stack", stat = "identity") +
   scale_fill_viridis_d() + 
   facet_wrap(~ SpeciesGroup)
+
 ```
 
