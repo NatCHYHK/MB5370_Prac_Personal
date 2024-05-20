@@ -35,25 +35,58 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 #load the copepod data into R studio
 #install.packages(readr)
 library(readr)
-dat <- read_csv("../data/Qfish_shark_fix_data.csv")
-dat
-View("dat")
+Qfish_data <- read_csv("../data/Qfish_shark_fix_data.csv")
+Qfish_data
 ```
+
+#tidy data
+```{r}
+library(readr)
+dat <- read_csv("../data/Qfish_shark_data.csv")
+dat
+```
+
+```{r}
+str(dat)   #show structure of data frame
+dat$CalendarYear = as.numeric(dat$CalendarYear)
+filtered_dat <- dat %>%
+  filter(!grepl("Total", CalendarYear)) %>%
+  filter(!grepl("Total", Area))
+```
+
 
 #ggplot
 ```{r}
 #install.packages("tidyverse") # Delete this line once installed
 library("tidyverse")
 ```
-
+#tidy data
+#rename?
 
 #figure
 ```{r}
-ggplot(data = dat) + 
-  geom_smooth(mapping = aes(x = "NumberCaught Total", y = "CalendarYear"))
+ggplot(data = filtered_dat) + 
+  geom_smooth(mapping = aes(x = `NumberCaught Total`, y = `CalendarYear`, colour = Area))
 ```
 
 ```{r}
-ggplot(data = dat)
+ggplot(data = filtered_dat) + 
+  geom_line(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, colour = Area ))
+
+#ggplot(data = filtered_dat) + 
+  #geom_line(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, colour = Area ))#
 ```
 
+```{r}
+ggplot(data = filtered_dat) + 
+  geom_bar(mapping = aes(x = `CalendarYear`, fill = `Area`), position = "stack")
+```
+
+```{r}
+ggplot(data = filtered_dat) + 
+  geom_bar(mapping = aes(x = `CalendarYear`, fill = `Area`), position = "fill")
+
+```
+
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), position = "fill")
