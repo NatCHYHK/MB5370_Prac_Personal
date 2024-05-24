@@ -136,7 +136,7 @@ ggplot(data = filtered_dat) +
   geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
            position = "stack", stat = "identity") +
   scale_fill_viridis_d() + 
-  facet_wrap(~ SpeciesGroup)
-
+  facet_wrap(~ SpeciesGroup)+
+  ggtitle("Total Number of shark & Turtle catch")
 ```
 
