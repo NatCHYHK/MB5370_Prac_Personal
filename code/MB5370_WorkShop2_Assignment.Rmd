@@ -138,5 +138,7 @@ ggplot(data = filtered_dat) +
   scale_fill_viridis_d() + 
   facet_wrap(~ SpeciesGroup)+
   ggtitle("Total Number of shark & Turtle catch")
+
+ggsave(filename = "../output/ggplot.jpg")
 ```
 
