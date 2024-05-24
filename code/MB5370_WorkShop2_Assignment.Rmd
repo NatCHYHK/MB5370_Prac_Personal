@@ -43,14 +43,38 @@ dat
 library(viridis)
 ```
 
+```{r}
+#install.packages("dplyr")
+#install.packages("stringr")
+library(dplyr)
+library(stringr)
+```
+
+
 #tidy data
 ```{r}
 str(dat)   #show structure of data frame
 dat$CalendarYear = as.numeric(dat$CalendarYear)
-filtered_dat <- dat %>%
-  filter(!grepl("Total", CalendarYear)) %>%
-  filter(!grepl("Total", Area))
+
+filtered_dat <- dat[!grepl("total", dat$CalendarYear, ignore.case = TRUE), ]
+filtered_dat <- dat[!grepl("total", dat$Area, ignore.case = TRUE), ]
+#filtered_dat <- dat %>%
+  #filter(!grepl("Total", CalendarYear)) %>%
+  #filter(!grepl("Total", Area))
 ```
+
+```{r}
+str(dat)   #show structure of data frame
+dat$CalendarYear = as.numeric(dat$CalendarYear)
+
+#filtered_dat <- dat[!is.na(dat)]
+filtered_dat <- na.omit(dat)
+print(filtered_dat)
+#filtered_dat <- dat %>% 
+  #filter(!grepl("Total", 'CalendarYear')) %>% 
+  #filter(!grepl("Total", Area))
+```
+
 #obmit NA in dataset
 ```{r}
 filtered_dat <- filtered_dat %>% filter(if_any(everything(), ~ !is.na(.)))
@@ -92,8 +116,12 @@ ggplot(data = filtered_dat) +
 
 ```{r}
 ggplot(data = filtered_dat) + 
-  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), position = "stack", stat = "identity") +
-  scale_colour_viridis()
+  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
+           position = "stack", stat = "identity") +
+  scale_fill_viridis_d()
+#ggplot(data = filtered_dat) + 
+  #geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), position = "stack", stat = "identity") +
+  #scale_colour_viridis()
 ```
 
 ```{r}
