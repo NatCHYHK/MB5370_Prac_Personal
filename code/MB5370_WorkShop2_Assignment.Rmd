@@ -30,71 +30,73 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 #----------------------------------------------------------------------------------
 
-#Import data set
+##MB5370_WorkShop2_Assignment
+#RMarkdown script
+
+
+##Import dataset downloaded of shark and turtle catch from Qfish dataset
 ```{r}
+#install.packages("readr")
 library(readr)
 dat <- read_csv("../data/Qfish_shark_data.csv")
 dat
 ```
 
-#download colour package
-```{r}
-#install.packages("viridis")
-library(viridis)
-```
 
-```{r}
-#install.packages("dplyr")
-#install.packages("stringr")
-library(dplyr)
-library(stringr)
-```
-
-
-#tidy data
+##Tidy Dataset
+#Since there were "NA" and "total" count in the dataset, we would tidy up the dataset by filtering out the data that involve "NA" and "total"
 ```{r}
 str(dat)   #show structure of data frame
 dat$CalendarYear = as.numeric(dat$CalendarYear)
 
+#filtering data that invlove total count
 filtered_dat <- dat[!grepl("total", dat$CalendarYear, ignore.case = TRUE), ]
 filtered_dat <- dat[!grepl("total", dat$Area, ignore.case = TRUE), ]
+print(filtered_dat)   #print data to see if the code works
+
+#code that did not work
 #filtered_dat <- dat %>%
   #filter(!grepl("Total", CalendarYear)) %>%
   #filter(!grepl("Total", Area))
 ```
 
+#obmit NA in dataset
 ```{r}
 str(dat)   #show structure of data frame
 dat$CalendarYear = as.numeric(dat$CalendarYear)
 
 #filtered_dat <- dat[!is.na(dat)]
 filtered_dat <- na.omit(dat)
-print(filtered_dat)
+print(filtered_dat)     #print data to see if the code works
+
+#code that did not work
 #filtered_dat <- dat %>% 
   #filter(!grepl("Total", 'CalendarYear')) %>% 
   #filter(!grepl("Total", Area))
+#filtered_dat <- filtered_dat %>% filter(if_any(everything(), ~ !is.na(.)))
 ```
 
-#obmit NA in dataset
-```{r}
-filtered_dat <- filtered_dat %>% filter(if_any(everything(), ~ !is.na(.)))
-print(filtered_dat)
-
-```
-
-#ggplot
+##ggplot
+#install pacjge "tidyverse" to use ggplot for generating figures
 ```{r}
 #install.packages("tidyverse") # Delete this line once installed
 library("tidyverse")
 ```
+#download colour package
+```{r}
+#install.packages("viridis")
+#install.packages(viridisLite)
+library(viridis)
+```
 
-
-#plot figure
+##Plot Figure
+#First attempt
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_smooth(mapping = aes(x = `NumberCaught Total`, y = `CalendarYear`, colour = Area))
 ```
 
+#Since that figure is a but hard to read, let's try another plot
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_line(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, colour = Area ))
@@ -103,42 +105,39 @@ ggplot(data = filtered_dat) +
   #geom_line(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, colour = Area ))#
 ```
 
+#The line graph seems to be a bit hard to read, let's try bar graph this time 
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_bar(mapping = aes(x = `CalendarYear`, fill = `Area`), position = "stack")
 ```
-
+#That seems much better, how about filled bar graph?
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_bar(mapping = aes(x = `CalendarYear`, fill = `Area`), position = "fill")
 
 ```
-
+#Seems like non-filled one was better, now let's try with another color package
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
            position = "stack", stat = "identity") +
   scale_fill_viridis_d()
+
+#code that did not work
 #ggplot(data = filtered_dat) + 
   #geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), position = "stack", stat = "identity") +
   #scale_colour_viridis()
 ```
 
-```{r}
-ggplot(data = filtered_dat) + 
-  geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
-           position = "stack", stat = "identity") +
-  scale_fill_viridis_d()
-```
-
+#That graph was good, but seems like we cannot see the difference between the shark catch and turtle catch, let's seperate them in two different graph. 
 ```{r}
 ggplot(data = filtered_dat) + 
   geom_bar(mapping = aes(x = `CalendarYear`, y = `NumberCaught Total`, fill = Area), 
            position = "stack", stat = "identity") +
   scale_fill_viridis_d() + 
-  facet_wrap(~ SpeciesGroup)+
-  ggtitle("Total Number of shark & Turtle catch")
+  facet_wrap(~ SpeciesGroup)+ 
+  ggtitle("Total Number of shark & Turtle catch")   #give figure title
 
-ggsave(filename = "../output/ggplot.jpg")
+ggsave(filename = "../output/ggplot.jpg")           #save output figure in file
 ```
 
